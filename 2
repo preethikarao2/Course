@@ -1,0 +1,38 @@
+
+// Given student ID find the sum of digits  if sum >=26 return respective alphabet if not repeat sum until sum falls in bracket of 26 to return alphabet.
+
+
+6442
+6+4+4+2=16  returns P
+
+28892
+2+8+8+9+2=29
+2+9=11 returns K
+
+
+
+import java.util.Scanner;  
+public class Main   
+{  
+public static void main(String args[])  
+{  
+int n, digit, sum = 0;  
+Scanner sc = new Scanner(System.in);  
+System.out.print("Enter the number: ");  
+n = sc.nextInt();  
+ while (n > 0 || sum > 26)
+        {
+            if (n == 0) {
+                n = sum;
+                sum = 0;
+            }
+            sum += n % 10;
+            n /= 10;
+        }
+
+
+sum=sum+65;
+System.out.println((char)(sum-1));  
+}
+}  
+}  
