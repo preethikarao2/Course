@@ -29,7 +29,11 @@ n = sc.nextInt();
             sum += n % 10;
             n /= 10;
         }
-
+/* To get single digit sum of numbers
+ if (n == 0)
+     return 0;
+ return (n % 9 == 0) ? 9 : (n % 9);
+        */
 
 sum=sum+65;
 System.out.println((char)(sum-1));  
